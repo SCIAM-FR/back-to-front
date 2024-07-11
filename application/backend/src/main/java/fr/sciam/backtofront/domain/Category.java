@@ -1,0 +1,18 @@
+package fr.sciam.backtofront.domain;
+
+public enum Category {
+  ABSTRACT,
+  AREA_CONTROL,
+  CARD_DRAFTING,
+  COOPERATIVE,
+  DUNGEON_CRAWLER,
+  FAMILY,
+  PARTY,
+  PUZZLE,
+  RESOURCE_MANAGEMENT,
+  ROLE_PLAYING_GAME,
+  STRATEGY,
+  TILE_PLACEMENT,
+  TRIVIA,
+  WORD_GAME
+}
