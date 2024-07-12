@@ -10,7 +10,7 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>ui-resources</artifactId>
-    <name>UI resources</name>
+    <artifactId>common-ui</artifactId>
+    <name>Common UI</name>
 
 </project>

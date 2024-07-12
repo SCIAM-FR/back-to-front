@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Release Year</th>
+      <th>Categories</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let game of boardGames">
+      <td>{{ game.id }}</td>
+      <td>{{ game.name }}</td>
+      <td>{{ game.releaseYear }}</td>
+      <td>{{ game.categories.join(", ") }}</td>
+    </tr>
+  </tbody>
+</table>
