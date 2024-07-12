@@ -1,0 +1,115 @@
+= Back to Front
+Antoine Sabot-Durand; Clément de Tastes; Pierre Cheucle; Yann Blazart
+:description: Back to Front presentation
+:copyright: CC BY-SA 4.0
+:data-uri:
+:sectids!:
+:includegifs:
+:toc2:
+:sectanchors:
+:idprefix:
+:idseparator: -
+:icons: font
+:source-highlighter: highlight.js
+:source-language: java
+:macros-on: subs="macros"
+:imagesdir: ../resources/images
+:hide-uri-scheme:
+:revealjs_theme: beige
+:revealjsdir: https://cdn.jsdelivr.net/npm/reveal.js@5.1.0
+:revealjs_hash: true
+:revealjs_width: 1500
+:revealjs_center: false
+:docinfo: shared
+:slides-url: //TODO define slides url
+:slides-src: https://github.com/SCIAM-FR/back-to-front
+
+[.columns]
+== Antoine Sabot-Durand
+
+[.column]
+* Java Champion
+* Tech lead at SCIAM
+* Former CDI spec lead
+* Former MicroProfile Health and Fault Tolerance spec lead
+* Follow me: @antoine_sd
+
+[.column]
+image::asd.png[role="pull-right",width="200"]
+
+[.columns]
+== Clément de Tastes
+
+[.column]
+* Tech lead at SCIAM
+//TODO: add more info
+
+[.column]
+image::cdt.jpg[role="pull-right",width="200"]
+
+[.columns]
+== Pierre Cheucle
+
+[.column]
+* Tech lead at SCIAM
+//TODO: add more info
+
+[.column]
+image::pc.jpg[role="pull-right",width="200"]
+
+
+
+[.columns]
+== Yann Blazart
+
+[.column]
+* Developing in Java since forever
+* Open source contributor (JaxWS/Metro, TomEE, WicketExtJs)
+* Senior Tech lead at Sciam
+* Currently working in a big Bank as a technical advisor.
+* Introduced Quarkus and Ingnite to this same big bank
+
+[.column]
+image::yb.png[role="pull-right",width="200"]
+
+== Agenda
+
+//TIP: _Slides_ here {slides-url}
+
+* icon:clock-o[] Introduction
+* icon:clock-o[] JSF
+* icon:clock-o[] Vaadin
+* icon:clock-o[] JavaFX
+* icon:clock-o[] HTMX
+* icon:clock-o[] Conclusion
+
+
+
+
+include::parts/intro.adoc[]
+
+include::parts/jsf.adoc[]
+
+include::parts/vaadin.adoc[]
+
+include::parts/javafx.adoc[]
+
+include::parts/htmx.adoc[]
+
+
+== Conclusion
+
+== Take away
+
+//TODO: add more info
+
+== References
+
+NOTE: _Slides_ are accessible here {slides-url}
+
+NOTE: _Slides source_ {slides-src}
+
+NOTE: Slides generated with _Asciidoctor_ and _Reveal.js_
+
+
+
