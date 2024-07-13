@@ -51,3 +51,8 @@ just type:
 generated file will be in standard maven target:
 
 `target/generated-docs/slides.html`
+
+=== Hot reload
+
+Slides include a livereload script that will automatically reload the browser when you change the source file.
+In order to use you need to browse the file through a local webserver like the one include in intellij or other IDE.
