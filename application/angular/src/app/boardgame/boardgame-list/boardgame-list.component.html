@@ -1,0 +1,42 @@
+<mat-table [dataSource]="boardGames">
+  <!-- ID Column -->
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+    <mat-cell *matCellDef="let game">{{ game.id }}</mat-cell>
+  </ng-container>
+
+  <!-- Image Column -->
+  <ng-container matColumnDef="image">
+    <mat-header-cell *matHeaderCellDef>Image</mat-header-cell>
+    <mat-cell *matCellDef="let game">
+      <img [src]="'assets/images/' + game.id + '.png'" alt="{{ game.name }}" />
+    </mat-cell>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+    <mat-cell *matCellDef="let game">{{ game.name }}</mat-cell>
+  </ng-container>
+
+  <!-- Release Year Column -->
+  <ng-container matColumnDef="releaseYear">
+    <mat-header-cell *matHeaderCellDef>Release Year</mat-header-cell>
+    <mat-cell *matCellDef="let game">{{ game.releaseYear }}</mat-cell>
+  </ng-container>
+
+  <!-- Categories Column -->
+  <ng-container matColumnDef="categories">
+    <mat-header-cell *matHeaderCellDef>Categories</mat-header-cell>
+    <mat-cell *matCellDef="let game">
+      <mat-chip-set>
+        @for (category of game.categories; track category) {
+        <mat-chip>{{ category }}</mat-chip>
+        }
+      </mat-chip-set>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+</mat-table>

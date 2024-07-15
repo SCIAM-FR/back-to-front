@@ -55,4 +55,4 @@ generated file will be in standard maven target:
 === Hot reload
 
 Slides include a livereload script that will automatically reload the browser when you change the source file.
-In order to use you need to browse the file through a local webserver like the one include in intellij or other IDE.
+In order to use you need to browse the file through a local webserver like the one included in intellij or other IDE.
