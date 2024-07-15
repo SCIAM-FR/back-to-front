@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatTableModule } from '@angular/material/table';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -8,7 +10,7 @@ import { BoardGameListComponent } from './boardgame/boardgame-list/boardgame-lis
 
 @NgModule({
   declarations: [AppComponent, BoardGameListComponent],
-  imports: [BrowserModule, HttpClientModule],
+  imports: [BrowserModule, HttpClientModule, MatTableModule, MatChipsModule],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
 })

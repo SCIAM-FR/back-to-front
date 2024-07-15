@@ -3,4 +3,41 @@
 
 Hello
 
+= Application Structure Diagram
 
+This diagram illustrates the structure of our application, including the common backend, specific backends, corresponding frontends, the JavaFX application, and the Angular application.
+
+[plantuml]
+....
+@startuml
+
+package "Backend" {
+  [common-backend]
+  [jsf-backend]
+  [htmx-backend]
+  [vaadin-backend]
+}
+
+package "Frontend" {
+  [jsf-frontend]
+  [htmx-frontend]
+  [vaadin-frontend]
+  [angular-frontend]
+}
+
+[javafx-app]
+
+[common-backend] <|-- [jsf-backend]
+[common-backend] <|-- [htmx-backend]
+[common-backend] <|-- [vaadin-backend]
+
+[jsf-backend] <-- [jsf-frontend] : consumes
+[htmx-backend] <-- [htmx-frontend] : consumes
+[vaadin-backend] <-- [vaadin-frontend] : consumes
+[common-backend] <-- [angular-frontend] : consumes
+
+[common-backend] <-- [javafx-app] : uses
+
+
+@enduml
+....

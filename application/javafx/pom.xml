@@ -12,11 +12,15 @@
     <artifactId>javafx</artifactId>
     <name>JavaFX</name>
 
+    <properties>
+        <quarkusfx.version>0.4.2</quarkusfx.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>io.quarkiverse.fx</groupId>
             <artifactId>quarkus-fx</artifactId>
-            <version>0.4.2</version>
+            <version>${quarkusfx.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -25,7 +29,7 @@
         </dependency>
         <dependency>
             <groupId>fr.sciam.backtofront</groupId>
-            <artifactId>backend</artifactId>
+            <artifactId>common-backend</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>

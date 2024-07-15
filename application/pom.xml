@@ -13,7 +13,7 @@
     <description>Projet multi-modules avec une partie commune et 4 parties spécifiques</description>
 
     <modules>
-        <module>backend</module>
+        <module>common-backend</module>
         <module>javafx</module>
         <module>vaadin</module>
         <module>jsf</module>

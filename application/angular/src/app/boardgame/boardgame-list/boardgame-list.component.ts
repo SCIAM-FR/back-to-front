@@ -25,4 +25,8 @@ export class BoardGameListComponent implements OnInit {
       }
     );
   }
+
+  get displayedColumns() {
+    return ['id', 'image', 'name', 'releaseYear', 'categories'];
+  }
 }
