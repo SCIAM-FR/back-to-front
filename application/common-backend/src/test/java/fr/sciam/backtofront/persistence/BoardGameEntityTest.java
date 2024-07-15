@@ -71,4 +71,3 @@ class BoardGameEntityTest {
     assertThat(boardGame.categories).containsExactlyInAnyOrder(expectedCategories);
   }
 }
-git
