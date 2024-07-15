@@ -18,7 +18,11 @@
             <artifactId>quarkus-fx</artifactId>
             <version>0.4.2</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>fr.sciam.backtofront</groupId>
             <artifactId>backend</artifactId>

@@ -9,7 +9,7 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>Back to Front - Parent</name>
+    <name>Back to the Front - Parent</name>
     <description>Projet multi-modules avec une partie commune et 4 parties spécifiques</description>
 
     <modules>
@@ -29,8 +29,8 @@
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
         <quarkus.platform.version>3.12.2</quarkus.platform.version>
-        <skipITs>true</skipITs>
         <surefire-plugin.version>3.2.5</surefire-plugin.version>
+        <skipITs>true</skipITs>
     </properties>
 
     <dependencyManagement>
@@ -41,6 +41,12 @@
                 <version>${quarkus.platform.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.34</version>
+                <scope>provided</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

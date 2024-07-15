@@ -1,4 +1,3 @@
-// board-game-list.component.ts
 import { Component, OnInit } from '@angular/core';
 import { BoardGame, BoardGameService } from '../boardgame.service';
 
@@ -16,7 +15,7 @@ export class BoardGameListComponent implements OnInit {
     this.loadBoardGames();
   }
 
-  loadBoardGames(): void {
+  private loadBoardGames(): void {
     this.boardGameService.getBoardGames().subscribe(
       (data) => {
         this.boardGames = data;

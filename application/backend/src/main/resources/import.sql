@@ -11,3 +11,6 @@ INSERT INTO BoardGameEntity (id, name, releaseYear, categories) VALUES
     (9, 'Codenames', 2015, JSON_ARRAY('PARTY', 'WORD_GAME')),
     (10, '7 Wonders', 2010, JSON_ARRAY('CARD_DRAFTING', 'STRATEGY'))
 ;
+
+-- Set the sequence to start from 11 for the next insertion
+ALTER SEQUENCE BOARDGAMEENTITY_SEQ RESTART WITH 11;

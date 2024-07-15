@@ -1,91 +1,70 @@
 package fr.sciam.backtofront;
 
+import fr.sciam.backtofront.component.BoardGameCategoriesCell;
+import fr.sciam.backtofront.component.BoardGameImageCell;
 import fr.sciam.backtofront.domain.Category;
+import fr.sciam.backtofront.mapper.BoardGameMapper;
 import fr.sciam.backtofront.persistence.entities.BoardGameEntity;
+import fr.sciam.backtofront.viewmodel.BoardGameViewData;
 import io.quarkiverse.fx.FxStartupEvent;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.event.Observes;
+import jakarta.inject.Inject;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import java.net.URL;
 import java.util.List;
 
 @ApplicationScoped
 public class FxApplication {
 
-  private Label label;
+  @Inject
+  BoardGameMapper boardGameMapper;
 
-  void onFxStartup(@Observes FxStartupEvent event) {
+  void onFxStartup(@Observes final FxStartupEvent event) {
 
     // TODO
-    TableView<BoardGameEntity> table = new TableView<>();
+    TableView<BoardGameViewData> table = new TableView<>();
     table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
 
-    TableColumn<BoardGameEntity, Long> idColumn = new TableColumn<>("ID");
-    idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+    TableColumn<BoardGameViewData, Number> idColumn = new TableColumn<>("ID");
+    idColumn.setCellValueFactory(cellData -> cellData.getValue().getId());
 
-    TableColumn<BoardGameEntity, Long> imageColumn = new TableColumn<>("Image");
+    TableColumn<BoardGameViewData, Number> imageColumn = new TableColumn<>("Image");
     imageColumn.setPrefWidth(150);
-    imageColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
-    imageColumn.setCellFactory(_ -> new TableCell<>() {
-      private final ImageView imageView = new ImageView();
-      private final HBox hbox = new HBox(this.imageView);
-      {
-        this.imageView.setPreserveRatio(true);
-//        this.hbox.setAlignment(Pos.CENTER);
-      }
+    imageColumn.setCellValueFactory(cellData -> cellData.getValue().getId());
+    imageColumn.setCellFactory(_ -> BoardGameImageCell.newBoardGameImageCell());
 
-      @Override
-      protected void updateItem(Long id, boolean empty) {
-        super.updateItem(id, empty);
-        if (empty || id == null) {
-          this.setGraphic(null);
-        } else {
-          URL resource = ImageResourceUtils.getImageResource(String.valueOf(id));
-          Image image = new Image(resource.toExternalForm(), true);
-          this.imageView.setImage(image);
+    TableColumn<BoardGameViewData, String> nameColumn = new TableColumn<>("Name");
+    nameColumn.setCellValueFactory(cellData -> cellData.getValue().getName());
 
-          this.setGraphic(this.imageView);
-        }
-      }
-    });
+    TableColumn<BoardGameViewData, Number> yearColumn = new TableColumn<>("Release Year");
+    yearColumn.setCellValueFactory(cellData -> cellData.getValue().getReleaseYear());
 
-    TableColumn<BoardGameEntity, String> nameColumn = new TableColumn<>("Name");
-    nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+    TableColumn<BoardGameViewData, ObservableList<Category>> categoriesColumn = new TableColumn<>("Categories");
+    categoriesColumn.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().getCategories()));
+    categoriesColumn.setCellFactory(_ -> BoardGameCategoriesCell.newBoardGameImageCell());
 
-    TableColumn<BoardGameEntity, Integer> yearColumn = new TableColumn<>("Release Year");
-    yearColumn.setCellValueFactory(new PropertyValueFactory<>("releaseYear"));
 
-    TableColumn<BoardGameEntity, List<Category>> categoriesColumn = new TableColumn<>("Categories");
-    categoriesColumn.setCellValueFactory(new PropertyValueFactory<>("categories"));
+    table.getColumns().addAll(idColumn, imageColumn, nameColumn, yearColumn, categoriesColumn);
 
-    table.getColumns().addAll(
-      idColumn,
-      imageColumn,
-      nameColumn,
-      yearColumn,
-      categoriesColumn
-    );
-
-    // Sample data
-    List<BoardGameEntity> entities = BoardGameEntity.listAll();
-    ObservableList<BoardGameEntity> data = FXCollections.observableList(entities);
+    // Load sample data
+    List<BoardGameViewData> entities = BoardGameEntity.<BoardGameEntity>listAll()
+      .stream()
+      .map(this.boardGameMapper::create)
+      .toList();
+    ObservableList<BoardGameViewData> data = FXCollections.observableList(entities);
 
     table.setItems(data);
 
+    // Display stage
     Stage stage = event.getPrimaryStage();
 
     VBox root = new VBox(table);

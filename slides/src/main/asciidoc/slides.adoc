@@ -23,6 +23,8 @@ Antoine Sabot-Durand; Clément de Tastes; Pierre Cheucle; Yann Blazart
 :docinfo: shared
 :slides-url: //TODO define slides url
 :slides-src: https://github.com/SCIAM-FR/back-to-front
+:plantuml-format: svg
+:plantuml-server-url: http://www.plantuml.com/plantuml
 
 [.columns]
 == Antoine Sabot-Durand
