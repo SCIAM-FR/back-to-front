@@ -10,15 +10,14 @@
     <packaging>pom</packaging>
 
     <name>Back to the Front - Parent</name>
-    <description>Projet multi-modules avec une partie commune et 4 parties spécifiques</description>
 
     <modules>
         <module>common-backend</module>
+        <module>common-ui</module>
         <module>javafx</module>
         <module>vaadin</module>
         <module>jsf</module>
         <module>htmx</module>
-        <module>ui-resources</module>
     </modules>
 
     <properties>
@@ -30,6 +29,9 @@
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
         <quarkus.platform.version>3.12.2</quarkus.platform.version>
         <surefire-plugin.version>3.2.5</surefire-plugin.version>
+        <lombok.version>1.18.34</lombok.version>
+        <mapstruct.version>1.5.5.Final</mapstruct.version>
+        <assertj.version>3.26.3</assertj.version>
         <skipITs>true</skipITs>
     </properties>
 
@@ -45,8 +47,19 @@
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>1.18.34</version>
+                <version>${lombok.version}</version>
                 <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-core</artifactId>
+                <version>${assertj.version}</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

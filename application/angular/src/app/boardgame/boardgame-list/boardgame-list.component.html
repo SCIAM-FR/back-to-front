@@ -30,9 +30,9 @@
     <mat-header-cell *matHeaderCellDef>Categories</mat-header-cell>
     <mat-cell *matCellDef="let game">
       <mat-chip-set>
-        <mat-chip *ngFor="let category of game.categories">{{
-          category
-        }}</mat-chip>
+        @for (category of game.categories; track category) {
+        <mat-chip>{{ category }}</mat-chip>
+        }
       </mat-chip-set>
     </mat-cell>
   </ng-container>
