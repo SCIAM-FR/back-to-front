@@ -1,6 +1,6 @@
-= Back to Front
-Antoine Sabot-Durand; Clément de Tastes; Pierre Cheucle; Yann Blazart
-:description: Back to Front presentation
+= I need your help on Quarkus Cucumber
+Said BOUDJELDA
+:description: I need your help on Quarkus Cucumber
 :copyright: CC BY-SA 4.0
 :data-uri:
 :sectids!:
@@ -22,79 +22,39 @@ Antoine Sabot-Durand; Clément de Tastes; Pierre Cheucle; Yann Blazart
 :revealjs_center: false
 :docinfo: shared
 :slides-url: //TODO define slides url
-:slides-src: https://github.com/SCIAM-FR/back-to-front
+:slides-src: //TODO define slides source
 
 [.columns]
-== Antoine Sabot-Durand
+== Said BOUDJELDA
 
 [.column]
-* Java Champion
-* Tech lead at SCIAM
-* Former CDI spec lead
-* Former MicroProfile Health and Fault Tolerance spec lead
-* Follow me: @antoine_sd
+* Backend Software Engineer @Sciam.fr
+* Open Source contributor (Kafka, Quarkus Cucumber, Quarkus Vault, Apache Kafka, JRecord ...)
+* Big passion for Distributed Computing
+* Follow me on GitHub: https://github.com/bmscomp[https://github.com/bmscomp]
 
 [.column]
-image::asd.png[role="pull-right",width="200"]
-
-[.columns]
-== Clément de Tastes
-
-[.column]
-* Tech lead at SCIAM
-//TODO: add more info
-
-[.column]
-image::cdt.jpg[role="pull-right",width="200"]
-
-[.columns]
-== Pierre Cheucle
-
-[.column]
-* Tech lead at SCIAM
-//TODO: add more info
-
-[.column]
-image::pc.jpg[role="pull-right",width="200"]
-
-
-
-[.columns]
-== Yann Blazart
-
-[.column]
-* Developing in Java since forever
-* Open source contributor (JaxWS/Metro, TomEE, WicketExtJs)
-* Senior Tech lead at Sciam
-* Currently working in a big Bank as a technical advisor.
-* Introduced Quarkus and Ingnite to this same big bank
-
-[.column]
-image::yb.png[role="pull-right",width="200"]
+image::bms.jpeg[role="pull-right",width="200"]
 
 == Agenda
 
 //TIP: _Slides_ here {slides-url}
 
 * icon:clock-o[] Introduction
-* icon:clock-o[] JSF
-* icon:clock-o[] Vaadin
-* icon:clock-o[] JavaFX
-* icon:clock-o[] HTMX
+* icon:clock-o[] Why Quarkus!
+* icon:clock-o[] Why Cucumber!
+* icon:clock-o[] Quarkus Cucumber
+* icon:clock-o[] Please help me
 * icon:clock-o[] Conclusion
 
 
+include::parts/introduction.adoc[]
 
+include::parts/quarkus.adoc[]
 
-include::parts/intro.adoc[]
+include::parts/cucumber.adoc[]
 
-include::parts/jsf.adoc[]
-
-include::parts/vaadin.adoc[]
-
-include::parts/javafx.adoc[]
-
-include::parts/htmx.adoc[]
+include::parts/quarkus-cucumber.adoc[]
 
 
 == Conclusion
