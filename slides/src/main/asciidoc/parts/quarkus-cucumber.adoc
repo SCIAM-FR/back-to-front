@@ -1,8 +1,0 @@
-
-== Quarkus Cucumber
-
-* icon:check-o[] Quarkus Cucumber is a Quarkus extension that allows you to write Cucumber tests for your Quarkus applications.
-
-* icon:check-o[] It provides a way to write tests in a human-readable format.
-
-

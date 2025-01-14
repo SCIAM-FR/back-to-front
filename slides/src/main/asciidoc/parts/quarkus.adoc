@@ -1,9 +1,0 @@
-
-== Why Quarkus!
-
-* icon:check[] Quarkus is a Kubernetes Native Java stack tailored for OpenJDK HotSpot and GraalVM, crafted from the best of breed Java libraries and standards.
-* icon:check[] Quarkus is a Cloud Native Java stack, made for Kubernetes and serverless environments.
-* icon:check[] Quarkus is a full-stack, Kubernetes-native Java framework made for Java Virtual Machines (JVMs) and native compilation, optimizing Java specifically for containers and enabling it to become an effective platform for a new generation of cloud-native applications.
-* icon:check[] Quarkus is a Kubernetes Native Java stack tailored for OpenJDK HotSpot and GraalVM, crafted from the best of breed Java libraries and standards.
-* icon:check[] Quarkus is a Cloud Native Java stack, made for Kubernetes and serverless environments.
-

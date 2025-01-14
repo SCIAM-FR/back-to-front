@@ -1,6 +1,0 @@
-
-== Why Cucumber!
-
-* Definition: Cucumber is a Behavior-Driven Development (BDD) tool that enables collaboration among developers,
-  testers, and non-technical stakeholders. It facilitates the creation of clear and shared understanding of system behaviors through simple, natural language specifications.
-* A plugin for a way of thinking level.
