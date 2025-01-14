@@ -1,4 +1,4 @@
-= We need your on Quarkus Cucumber
+= I need your help on Quarkus Cucumber
 Said BOUDJELDA
 :description: I need your help on Quarkus Cucumber
 :copyright: CC BY-SA 4.0
@@ -15,7 +15,7 @@ Said BOUDJELDA
 :macros-on: subs="macros"
 :imagesdir: ../resources/images
 :hide-uri-scheme:
-:revealjs_theme: white
+:revealjs_theme: beige
 :revealjsdir: https://cdn.jsdelivr.net/npm/reveal.js@5.1.0
 :revealjs_hash: true
 :revealjs_width: 1500
@@ -28,55 +28,38 @@ Said BOUDJELDA
 == Said BOUDJELDA
 
 [.column]
-* Backend Software Engineer *@Sciam.fr*
-* Open Source contributor (Yes I think I can say that ...)
-* Passionate about *Distributed Computing*
+* Backend Software Engineer @Sciam.fr
+* Open Source contributor (Kafka, Quarkus Cucumber, Quarkus Vault, Apache Kafka, JRecord ...)
+* Big passion for Distributed Computing
 * Follow me on GitHub: https://github.com/bmscomp[https://github.com/bmscomp]
 
 [.column]
-image::profile.png[role="pull-right",width="300"]
-image::sciam.png[role="pull-right",width="200"]
+image::bms.jpeg[role="pull-right",width="200"]
 
 == Introduction
 
+
 NOT REALLY AN INTRODUCTION BUT IT'S MORE A CONTEXT
 
-[.columns]
 == Why Quarkus?
 
-[.columns]
-- *Java* (The programming language of the enterprise world)
+- Java (The programming language of the enterprise world)
 - Ultra-fast startup time
 - Low memory footprint
 - Native compilation
 - Kubernetes integration
 - Active Community and Enterprise Support
 
-image::quarkus-logo.png[role="pull-right",width="300"]
-
-== Quarkus in one image
+== Why Quarkus?
 
 image::quarkus.png[role="center",height="90%"]
 
-[.columns]
 == Why Cucumber?
 
-[.column]
 - BDD (Behavior Driven Development)
+- A framework for writing tests in natural language (Gherkin)
 - Make tests readable and understandable by non-technical people
 - Living documentation
-- A framework for writing tests in natural language (Gherkin)
-
-[.column]
-image::cucumber-log.png[role="pull-right",width="300"]
-
-== The magic Gerkin
-
-image::gerkin.png[role="center",height="90%"]
-
-== Cucumber in one image
-
-image::cucumber.png[role="pull-right",height="90%"]
 
 == What to do?
 
@@ -111,4 +94,7 @@ image::quarkus-cucumber.png[role="pull-right",height="90%"]
 == Questions !*
 
 Any question, please?
+
+image::thank_you.png[role="center",height="90%"]
+
 
