@@ -36,65 +36,40 @@ Said BOUDJELDA
 [.column]
 image::bms.jpeg[role="pull-right",width="200"]
 
-== Introduction
+== Agenda
+
+//TIP: _Slides_ here {slides-url}
+
+* icon:clock-o[] Introduction
+* icon:clock-o[] Why Quarkus!
+* icon:clock-o[] Why Cucumber!
+* icon:clock-o[] Quarkus Cucumber
+* icon:clock-o[] Please help me
+* icon:clock-o[] Conclusion
 
 
-NOT REALLY AN INTRODUCTION BUT IT'S MORE A CONTEXT
+include::parts/introduction.adoc[]
 
-== Why Quarkus?
+include::parts/quarkus.adoc[]
 
-- Java (The programming language of the enterprise world)
-- Ultra-fast startup time
-- Low memory footprint
-- Native compilation
-- Kubernetes integration
-- Active Community and Enterprise Support
+include::parts/cucumber.adoc[]
 
-== Why Quarkus?
+include::parts/quarkus-cucumber.adoc[]
 
-image::quarkus.png[role="center",height="90%"]
 
-== Why Cucumber?
+== Conclusion
 
-- BDD (Behavior Driven Development)
-- A framework for writing tests in natural language (Gherkin)
-- Make tests readable and understandable by non-technical people
-- Living documentation
+== Take away
 
-== What to do?
+//TODO: add more info
 
-- Contribute to the Quarkus Cucumber extension
+== References
 
-== We really need you for
+NOTE: _Slides_ are accessible here {slides-url}
 
-- Write documentation
-- Enhance the extension
-- Implement new features
-- Test the extension
+NOTE: _Slides source_ {slides-src}
 
-== Solve issues
+NOTE: Slides generated with _Asciidoctor_ and _Reveal.js_
 
-image::issue.png[role="pull-right",height="90%"]
-
-== More
-
-image::quarkus-cucumber.png[role="pull-right",height="90%"]
-
-== What's next?
-
-- The big refactoring of the extension must come one day
-
-== Useful links ?
-
-- https://github.com/quarkiverse/quarkus-cucumber[Quarkus Cucumber Extension GitHub repo]
-- https://docs.quarkiverse.io/quarkus-cucumber/dev/index.html[Quarkus Cucumber documentation]
-- https://docs.quarkiverse.io/quarkus-cucumber/dev/index.html[Quarkus]
-- https://cucumber.io/[Cucumber official website]
-
-== Questions !*
-
-Any question, please?
-
-image::thank_you.png[role="center",height="90%"]
 
 
